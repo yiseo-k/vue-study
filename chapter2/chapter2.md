@@ -70,8 +70,9 @@ Vue 생명주기란 (이하 라이프사이클) Vue 인스턴스의 생성부터
 _생명주기는 **생성 (Create) - 초기화 (Mount) - 갱신 (Update) - 파괴 (Destory)** 4단계로 나뉜다._
 
 1) 생성(Create) 단계
-
+<!--
 [##_Image|kage@bls5yb/btqB2vJjS1h/DexcK2fekJpSLlAovOWbTK/img.jpg|alignLeft|data-filename="create.jpg" data-origin-width="1199" data-origin-height="619" width="769"|11||_##]
+-->
 
 Create 단계에서 실행되는 훅(Hook)들이 라이프사이클 중 가장 처음 실행된다.
 
@@ -102,7 +103,9 @@ var app = new Vue({
 
 2) 초기화(Mount) 단계
 
+<!-- 
 [##_Image|kage@ceyN4l/btqBZNLnG4H/4TOoOab0tztPK9CkYIPkG0/img.jpg|alignLeft|data-filename="mount.jpg" data-origin-width="1198" data-origin-height="1249" width="580" height="605"|||_##]
+-->
 
 컴포넌트가 DOM에 추가될 때 실행되는 훅이다. 서버 사이드 렌더링을 지원하지 않는다. 
 
@@ -116,7 +119,9 @@ mounted 훅을 사용하기 때문에 거의 사용하지 않는 라이프사이
 
 \- mounted : 가상 DOM의 내용이 실제 DOM에 부착되고 난 이후 실행되므로 대부분 모든 요소에 접근이 가능하다.
 
+<!--
 [##_Image|kage@HhoBy/btqB1c409SM/CJikKaJxVBnMuKm9joOEWk/img.png|alignLeft|data-filename="mounted.png" data-origin-width="537" data-origin-height="629"|||_##]
+-->
 
 위 그림처럼 Created훅은 부모 → 자식 순서로 실행되지만 Mounted훅은 자식 → 부모 순서로 실행된다.
 
@@ -124,7 +129,9 @@ mounted 훅을 사용하기 때문에 거의 사용하지 않는 라이프사이
 
 3) 갱신(Update) 단계
 
+<!--
 [##_Image|kage@ba7Mc8/btqB1GqZ6pI/rplYBYr0HKyPUiPWw4vyZk/img.jpg|alignLeft|data-filename="update.jpg" data-origin-width="822" data-origin-height="580" width="599"|||_##]
+-->
 
 컴포넌트에서 사용되는 반응형 속성들이 변경되거나 어떤 이유로 재 렌더링됐을 때 실행된다.
 
@@ -141,8 +148,10 @@ mounted 훅을 사용하기 때문에 거의 사용하지 않는 라이프사이
 무한 루프를 일으킬 수 있으니 데이터를 직접 바꾸진 말 것!
 
 4) 파괴(Destroy) 단계
-
+<!--
 [##_Image|kage@bjPe7d/btqBZNYXb3p/Kso0eNPmyKwLylMGGpvpBk/img.jpg|alignLeft|data-filename="destory.jpg" data-origin-width="1199" data-origin-height="693" width="571"|||_##]
+-->
+
 
 컴포넌트가 제거될 때 실행되는 단계이다.
 
