@@ -64,7 +64,7 @@ Uncaught TypeError: this.myMethod is not a function와 같은 오류가�
 Vue 생명주기란 (이하 라이프사이클) Vue 인스턴스의 생성부터 메모리에서 삭제되기 전까지 과정
 사용자는 Vue 인스턴스를 생성할 때 전달했던 option을 통해 라이프사이클 훅을 정의할 수 있다. 
 (훅은 Vue 라이브러리 코드의 일부, 실행되는 함수를 의미)
-
+<br/>
 생명주기는 **생성 (Create) - 초기화 (Mount) - 갱신 (Update) - 파괴 (Destory)** 4단계로 나뉜다.
 <br/>
 <br/>
@@ -103,16 +103,16 @@ var app = new Vue({
 컴포넌트가 DOM에 추가될 때 실행되는 훅이다. 서버 사이드 렌더링을 지원하지 않는다. 
 렌더링될 때 DOM을 변경하고 싶다면 사용하되 컴포넌트 초기에 data가 세팅되야 한다면, created 훅을 이용하는 것이
 좋다.
+<br/>
+<br/>
 
-<br/>
-<br/>
 \- mounted : 가상 DOM의 내용이 실제 DOM에 부착되고 난 이후 실행되므로 모든 요소에 접근이 가능
 
 <br/>
 <br/>
 <br/>
-3) 갱신(Update) 단계
 
+3) 갱신(Update) 단계
 <!--
 [##_Image|kage@ba7Mc8/btqB1GqZ6pI/rplYBYr0HKyPUiPWw4vyZk/img.jpg|alignLeft|data-filename="update.jpg" data-origin-width="822" data-origin-height="580" width="599"|||_##]
 -->
@@ -133,7 +133,7 @@ var app = new Vue({
 <!--
 [##_Image|kage@bjPe7d/btqBZNYXb3p/Kso0eNPmyKwLylMGGpvpBk/img.jpg|alignLeft|data-filename="destory.jpg" data-origin-width="1199" data-origin-height="693" width="571"|||_##]
 -->
-
+<br/>
 컴포넌트가 제거될 때 실행되는 단계이다.
 <br/>
 \- destoryed : 컴포넌트가 제거된 후 호출되는 훅이다. 컴포넌트의 모든 이벤트 리스너 (click, change 등)와 
