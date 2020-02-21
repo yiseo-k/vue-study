@@ -22,9 +22,9 @@ new Vue({
 
 data 속성은 별도의 프록시를 통해 관리, data 객체의 속성들은 자동적으로 Vue 인스턴스 객체의 속성이 된다. 
 Vue 객체를 통해 프록시 처리된 data에 접근하는 방법을 알아보자.
+<br/>
+<br/>
 
-<br/>
-<br/>
 ▶ var vm = new Vue({..})와 같이 선언된 경우 vm을 통해 접근
 ```
 var vm = new Vue({
@@ -43,9 +43,11 @@ vm.age = 18;
 vm.$data.name = "이서";
 vm.$data.age = 18;
 ```
+
 <br/>
 위의 예시처럼 data 객체 내부 속성은 Vue 인스턴스가 할당될 vm(변수명).name(속성)으로 바로 접근가능
 변수명.속성 = 원하는 값; 이런 방식으로 새로운 값을 넣어주는 것도 가능하다(=>Setter)
+
 <br/>
 ※ 주의 : option 속성이나 콜백에 화살표 함수 사용을 지양할 것.  
 화살표 함수는 부모 컨텍스트에 바인딩되기 때문에, this 컨텍스트가 호출하는 Vue 인스턴스에서   
@@ -63,14 +65,12 @@ Vue 생명주기란 (이하 라이프사이클) Vue 인스턴스의 생성부터
 사용자는 Vue 인스턴스를 생성할 때 전달했던 option을 통해 라이프사이클 훅을 정의할 수 있다. 
 (훅은 Vue 라이브러리 코드의 일부, 실행되는 함수를 의미)
 
-<br/>
 생명주기는 **생성 (Create) - 초기화 (Mount) - 갱신 (Update) - 파괴 (Destory)** 4단계로 나뉜다.
 <br/>
 <br/>
+
 1) 생성(Create) 단계
-<!--
-[##_Image|kage@bls5yb/btqB2vJjS1h/DexcK2fekJpSLlAovOWbTK/img.jpg|alignLeft|data-filename="create.jpg" data-origin-width="1199" data-origin-height="619" width="769"|11||_##]
--->
+
 
 Create 단계에서 실행되는 훅(Hook)들이 라이프사이클 중 가장 처음 실행
 아직 컴포넌트가 DOM에 추가되기 전이기 때문에 DOM에 접근하거나 this.$el를 사용할 수 없다.
