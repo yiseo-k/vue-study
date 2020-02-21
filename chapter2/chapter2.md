@@ -48,6 +48,7 @@ vm.$data.age = 18;
 위의 예시처럼 data 객체 내부 속성은 Vue 인스턴스가 할당될 vm(변수명).name(속성)으로 바로 접근가능
 변수명.속성 = 원하는 값; 이런 방식으로 새로운 값을 넣어주는 것도 가능하다(=>Setter)
 
+
 <br/>
 ※ 주의 : option 속성이나 콜백에 화살표 함수 사용을 지양할 것.  
 화살표 함수는 부모 컨텍스트에 바인딩되기 때문에, this 컨텍스트가 호출하는 Vue 인스턴스에서   
@@ -134,7 +135,9 @@ var app = new Vue({
 [##_Image|kage@bjPe7d/btqBZNYXb3p/Kso0eNPmyKwLylMGGpvpBk/img.jpg|alignLeft|data-filename="destory.jpg" data-origin-width="1199" data-origin-height="693" width="571"|||_##]
 -->
 <br/>
+
 컴포넌트가 제거될 때 실행되는 단계이다.
 <br/>
+
 \- destoryed : 컴포넌트가 제거된 후 호출되는 훅이다. 컴포넌트의 모든 이벤트 리스너 (click, change 등)와 
 디렉티브 (v-model, v-show 등)의 바인딩이 해제되고 하위 컴포넌트도 모두 제거된다.
