@@ -6,5 +6,5 @@
 3. v-show와 v-if / v-else 속성
 
 ```
-[velog]:(https://yi-seo.tistory.com/26)
+참조 블로그: <https://yi-seo.tistory.com/26>
 ```
