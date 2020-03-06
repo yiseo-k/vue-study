@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://unpkg.com/vue"></script>
+    <style>
+        .fade-enter-active,
+        .fade-leave-active {
+            transition: opacity 3.0s ease-out;
+        }
+
+        .fade-enter,
+        .fade-leave-to {
+            opacity: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <div @click="show = !show">
+            <h2>{{title}}</h2>
+        </div>
+        <transition name="fade">
+            <div v-if="show">
+                <h1>{{description}}</h1>
+            </div>
+        </transition>
+    </div>
+    <script>
+        new Vue({
+            el: '#app',
+            data() {
+                return {
+                    title: 'Vue.js 코딩 공작소',
+                    description: 'Vue.js에 대해 알아가보자',
+                    show: false
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
