@@ -10,5 +10,5 @@
 
 
 
-[](https://yi-seo.tistory.com/32)
+블로그 참조 : https://yi-seo.tistory.com/32
 
